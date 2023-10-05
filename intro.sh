@@ -88,11 +88,40 @@ for NNAME in "$NAMES"
 done
 
 
-FILES=$(ls *txt)
-NEW="new"
+#FILES=$(ls *txt)
+#NEW="new"
 
-for FILE in $FILES
+#for FILE in $FILES
+#	do
+#		mv $FILE $NEW-$FILE
+# done
+
+# WHILE LOOPS
+
+LINE=1
+while read -r CURRENT_LINE
 	do
-		mv $FILE $NEW-$FILE
-done
+		echo "$LINE: $CURRENT_LINE"
+		((LINE++))
+done < "./new-test.txt"
 
+
+# FUNCTIONS
+function say_hello() {
+	echo "Hello world"
+}
+
+say_hello
+
+function greet() {
+	echo "Hello $1 you are $2 years old"
+}
+
+greet "sean" "34"
+
+# CREATE FOLDER AND WRITE A FILE
+mkdir folder_name
+touch "folder_name/world.txt"
+
+echo "Hello world" >> "folder_name/world.txt"
+echo "Created folder_name/world.txt"
