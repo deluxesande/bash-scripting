@@ -1,0 +1,13 @@
+#! /usr/bin/bash
+
+# Run mac address changer
+# restore mac address
+# This is for your NIC
+sudo macchanger -p eth0
+
+# Restoring mac address for your computer
+# Root required
+anonym8 stop_mac
+
+echo "You are NOT protected"
+echo "All your mac addresses are NOT spoofed"

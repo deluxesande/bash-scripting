@@ -1,0 +1,13 @@
+#! /usr/bin/bash
+
+# Run mac address changer
+# Set it to a random mac address
+# This is for your NIC
+sudo macchanger -r eth0
+
+# Changing mac address for your computer
+# Root required
+anonym8 start_mac
+
+echo "You are protected"
+echo "All your mac addresses are spoofed"

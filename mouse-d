@@ -1,0 +1,11 @@
+!# /usr/bin/bash
+
+# List all pointer devices
+xinput --list
+
+# Disable faulty devices
+read -p "Device number: " device
+xinput --disable $device
+
+read -p "Device number: " device2
+xinput --disable $device2
